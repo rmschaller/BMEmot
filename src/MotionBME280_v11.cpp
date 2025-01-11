@@ -2163,7 +2163,7 @@ void UserFN::handleGotTime() {
   setTime(enteredTime);
   localTimeOffset = UserFN::dstUSA(enteredTime);
   testFlag = 1;
-  printf("Test: Local time offset = %d\n",localTimeOffset);
+  printf("Test: Local time offset = %lld\n",localTimeOffset);
 
   server.send(200, "text/html", "Time has been changed");
 }
