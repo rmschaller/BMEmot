@@ -1,7 +1,12 @@
 #include <Time.h>
 #include <TimeLib.h>
 #define VERSION "D0.00.11   February 11, 2023"
+<<<<<<< HEAD
 #include "A.h" //function declarations
+=======
+//using namespace std;
+#include "A.h"
+>>>>>>> bf1d944 (Initial commit)
 /* Changes in this version:
  1. Added new feature that shows the amount of daylight gained or lost 
     from the previous day. - rschaller
@@ -69,7 +74,11 @@
 #define undfinedBrd 0
 #define BMEMotBrd 1
 #define MotStatusBrd 2
+<<<<<<< HEAD
 //#define SumpBrd 3
+=======
+#define SumpBrd 3
+>>>>>>> bf1d944 (Initial commit)
 
 Adafruit_BME280 bme;          // I2C Interface
 unsigned long delayTime;
@@ -99,6 +108,10 @@ SSD1306 display(OLED_ADDR, OLED_SDA, OLED_SCL);             // For I2C
 // This is for the mqtt client/server
 #include <PubSubClient.h>
 //#include <ESP8266WebServer.h>
+<<<<<<< HEAD
+=======
+//#define DEFAULT_MQTT_SERVER "mqtt.bicyclist1.com"
+>>>>>>> bf1d944 (Initial commit)
 #define DEFAULT_MQTT_SERVER "192.168.66.2"
 #define DEFAULT_MQTT_USER ""                                // Your User Name
 #define DEFAULT_MQTT_PASSWORD ""                            // Your User Password
@@ -179,7 +192,11 @@ ESP8266WebServer server(PORT);
 #define HA_DEFAULT_CONTROL 0                                // Set default to disable (both motion and environmental sensor)
 #define HA_DEFAULT_MOTION 15                                // Set the motion default timeout to 15 seconds (max of 600 seconds)
 #define FRIENDLY_SIZE 17                                    // BME board friendly name max characters + 1
+<<<<<<< HEAD
 #define DEBUG_LEVEL 2                                       // <2 -> Undefined (Basic); 2 -> Motion; 3 -> Enviromental; 4 -> EEPROM Variables; 5 -> EEPROM Dump/Passwords
+=======
+#define DEBUG_LEVEL 1                                       // <2 -> Undefined (Basic); 2 -> Motion; 3 -> Enviromental; 4 -> EEPROM Variables; 5 -> EEPROM Dump/Passwords
+>>>>>>> bf1d944 (Initial commit)
 
 // EEPROM storage definitions
 #define EEPROM_SIZE 512
@@ -567,6 +584,7 @@ void UserFN::sendInfoPacket(){
 
 
 // ****************************** Setup ******************************
+<<<<<<< HEAD
 /*
  The following tasks are performed in setup()
  1. Setup a serial port for debugging messages
@@ -579,6 +597,8 @@ void UserFN::sendInfoPacket(){
  6. Check for valid SSID, if none valid, set up ad-hoc connection
  7. Connect to WiFi
  8. Start web and MQTT servers */
+=======
+>>>>>>> bf1d944 (Initial commit)
 void setup() {
   unsigned short i;
   char apName[FRIENDLY_SIZE];
@@ -2163,7 +2183,11 @@ void UserFN::handleGotTime() {
   setTime(enteredTime);
   localTimeOffset = UserFN::dstUSA(enteredTime);
   testFlag = 1;
+<<<<<<< HEAD
   printf("Test: Local time offset = %lld\n",localTimeOffset);
+=======
+  printf("Test: Local time offset = %d\n",localTimeOffset);
+>>>>>>> bf1d944 (Initial commit)
 
   server.send(200, "text/html", "Time has been changed");
 }
