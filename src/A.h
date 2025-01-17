@@ -1,9 +1,5 @@
 // Add any helper or user defined function here
-<<<<<<< HEAD
 #include <WString.h> // used for String type
-=======
-#include <WString.h> 
->>>>>>> bf1d944 (Initial commit)
 #include <ESP8266WebServer.h>
 class UserFN
 {
