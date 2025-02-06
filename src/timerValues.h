@@ -9,6 +9,7 @@
 #define OLED_SDA  D2
 #define OLED_SCL  D1
 #define OLED_ADDR 0x3C                                      // I2C address for OLED, some might use 3D
+#define OLED_SWITCH D0
 // Apparently the Dn NodeMCU pins are no longer defined, so here they are
 #ifndef D1
 #define D0 16                 // cannot use for interrupts (also WAKE)
@@ -29,7 +30,10 @@
 #define WIFI_RESET_TIME 5                                   // Reset WiFi Parameters after xx seconds
 #define EEPROM_RESET_TIME 15                                // Reset EEPROM after xx seconds (EEPROM_RESET_TIME ***MUST*** BE > WIFI_RESET_TIME; No checks made)
 // MQTT
-#define DEFAULT_MQTT_SERVER "192.168.66.18"                 // use MQTT p/o Hone assistant
+#define DEFAULT_HA_MQTT_SERVER "192.168.66.18"
+#define DEFAULT_HA_MQTT_USER ""
+#define DEFAULT_HA_MQTT_PASSWORD ""
+#define DEFAULT_MQTT_SERVER "192.168.66.2"                 // use MQTT p/o Hone assistant
 #define DEFAULT_MQTT_USER ""                                // Your User Name
 #define DEFAULT_MQTT_PASSWORD ""                            // Your User Password
 #define MQTT_SERVER_SIZE 32                                 // Max characters -1 for HA server address

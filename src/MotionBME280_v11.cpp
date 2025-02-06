@@ -1,6 +1,6 @@
 #include <Time.h>
 #include <TimeLib.h>
-#define VERSION "D0.00.12   January 22, 2023"
+#define VERSION "D0.00.12   January 22, 2025"
 #include "A.h" //function declarations
 #include "timerValues.h"
 /* Changes in this version:
